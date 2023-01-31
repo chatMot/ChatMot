@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Mot - The Movie ChatBot</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <script>
+            function openChat() {
+                Kommunicate.displayKommunicateWidget(true); //This will show the widget
+                Kommunicate.launchConversation();        
+            }
+            (function(d, m){
+            var kommunicateSettings = {"appId":"2f13b19fabd430be4f2dac4e5fa07ebc2","popupWidget":true,"automaticChatOpenOnNavigation":true,
+            //The following settings will disable the widget on page load
+            "onInit": function()
+            {
+                Kommunicate.displayKommunicateWidget(false);
+                document.getElementById("button").disabled=false;
+            }
+             }
+            var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+            s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+            var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+            window.kommunicate = m; m._globals = kommunicateSettings;
+            })(document, window.kommunicate || {});
+        </script>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Mot</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#chatbot">Chat with Mot</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.netflix.com/" target="_blank">Subscribe to Netflix</a></li>
+                        <li class="nav-item"><a class="nav-link" href="MOT.pdf" target="_blank">Project Documentation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://github.com/MotMovieBot/Mot" target="_blank">Github repository</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container  d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div id="prima" class="text-center">
+                        <h1 id="title">Mot - The Movie ChatBot</h1>
+                        <h2 class="text-center" id="h2">Choose your movie!</h2>
+                        <a id="bottone" class="btn btn-primary text-center" href="#about">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="about-section text-center" id="about">
+            <div >
+                <div class="row gx-4 gx-lg-5">
+                    <div>
+                        <h2>What can you do with Mot?</h2>
+                        <div id="boh">
+                        <p>Mot is here to help you find the perfect Netflix movie for you! You can ask him suggestion about film categories and titles and he will provide a small description for each film! Simple and useful for everyone!
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-4 px-lg-5"  id="chatbot">
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8" ><img id="zero" class="img-fluid mb-3 mb-lg-0" src="assets/img/netflix.png" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class=" text-center">
+                            <input type="button" value="Chat with Mot" id="button" class="btn btn-primary" disabled="true" onclick="openChat()"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; MotTheChatbot 2023</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        
+    </body>
+</html>
